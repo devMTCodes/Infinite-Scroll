@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 html {
   box-sizing: border-box;
   /* Prevents Padding from adding Extra Width or Height to the Page */
@@ -6,6 +7,58 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: Bungee Inline, sans-serif;
+  background: whitesmoke;
   /* vh Stands for ViewPort Height (Height of Entire Window that your in)
   Always Streth Background the Entire Height of the Screen EVENIF the content isnt enough to take up the full height of the screen */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  letter-spacing: 4px;
+  /* Stretch Text Verticaly */
+  transform: scaleY(2.5);
+}
+
+/* Loader */
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.loader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* Centering Image Regardless of Img SIze */
+  transform: translate(-50%, -50%);
+}
+
+/* Image Container */
+
+.image-container {
+  margin: 10px 30%;
+}
+
+.image-container img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Media Query: Large SmartPhone */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+  }
+  .image-container {
+    margin: 10px;
+  }
 }
